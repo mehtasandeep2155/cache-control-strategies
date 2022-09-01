@@ -15,7 +15,7 @@ export default function Index({ products }) {
 export async function getServerSideProps({ req, res }) {
   res.setHeader(
     "Cache-Control",
-    "public, s-maxage=10, stale-while-revalidate=59"
+    "public, s-maxage=30, stale-while-revalidate=59"
   );
 
   const response = await fetch(
